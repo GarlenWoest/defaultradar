@@ -1,0 +1,77 @@
+{
+  "final_model": "Logistic Regression",
+  "cv_comparison": [
+    {
+      "model": "Logistic Regression",
+      "roc_auc": 0.7349,
+      "roc_auc_std": 0.0081,
+      "pr_auc": 0.4363
+    },
+    {
+      "model": "Gradient Boosting",
+      "roc_auc": 0.7266,
+      "roc_auc_std": 0.008,
+      "pr_auc": 0.4213
+    },
+    {
+      "model": "Random Forest",
+      "roc_auc": 0.7257,
+      "roc_auc_std": 0.0085,
+      "pr_auc": 0.4129
+    }
+  ],
+  "test_comparison": [
+    {
+      "model": "Logistic Regression",
+      "roc_auc": 0.7472,
+      "pr_auc": 0.4432,
+      "ks": 0.3733,
+      "brier": 0.2082
+    },
+    {
+      "model": "Random Forest",
+      "roc_auc": 0.7346,
+      "pr_auc": 0.4158,
+      "ks": 0.3498,
+      "brier": 0.1833
+    },
+    {
+      "model": "Gradient Boosting",
+      "roc_auc": 0.7381,
+      "pr_auc": 0.426,
+      "ks": 0.3572,
+      "brier": 0.207
+    }
+  ],
+  "calibration": {
+    "brier_raw": 0.2082,
+    "brier_calibrated": 0.1438
+  },
+  "ks": 0.3733,
+  "decision": {
+    "best_cutoff": 0.1544,
+    "best_profit": 2517573.8522,
+    "best_approval_rate": 0.4232,
+    "best_bad_rate": 0.0816,
+    "approve_all_profit": -6704028.8876,
+    "uplift_vs_approve_all": 9221602.7398
+  },
+  "dropped_leakage_columns": [
+    "recoveries",
+    "total_rec_prncp",
+    "last_pymnt_amnt"
+  ],
+  "top_drivers": [
+    "credit_score",
+    "dti",
+    "installment_to_income",
+    "revol_util",
+    "loan_to_income",
+    "delinq_2yrs",
+    "inq_last_6mths",
+    "term"
+  ],
+  "default_rate": 0.2105,
+  "n_train": 22500,
+  "n_test": 7500
+}
